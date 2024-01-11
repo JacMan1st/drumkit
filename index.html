@@ -5,15 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drum kit</title>
+    <link rel="icon" href="data:;base64,iVBORwOKGO="> <!-- stops error messsage on first press -->
 </head>
 <body>
+    <!-- images -->
     <div id="drumKit">
-        <img id="bass" src="" alt="">
-        <img id="snare" src="" alt="">
-        <img id="kick" src="" alt="">
-        <img id="highHat" src="" alt="">
-
+        <img data-key="32" id="base" src="bass.jpg" alt="">
+        <img data-key="70" id="snare" src="snare.jpg" alt="">
+        <img data-key="71" id="hiHat" src="high hat.jpg" alt="">
+        <img data-key="72" id="crash" src="" alt="">
+        <img data-key="89" id="hiTom" src="" alt="">
+        <img data-key="84" id="midTom" src="" alt="">
     </div>
+    <!-- audio with data- tags -->
+    <audio data-key="32" src="boom.wav"></audio>
+    <audio data-key="70" src="snare.wav"></audio> <!-- added 2 snares so can play same as real life..ish -->
+    <audio data-key="71" src="snare.wav"></audio>
+    <audio data-key="72" src="hihat.wav"></audio>
+    <audio data-key="89" src="openhat.wav"></audio>
+    <audio data-key="84" src="tom.wav"></audio>
+
+
 
     <script src="./main.js"></script>
 </body>
