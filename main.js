@@ -1,3 +1,4 @@
+
 // event listener to detect a pressed key
 window.addEventListener('keydown', (event) => {
     // log keycode of pressed key
@@ -8,9 +9,13 @@ window.addEventListener('keydown', (event) => {
 
     // gets audio elemt using the keycode
     const audio = document.querySelector(`audio[data-key="${keyCode}"]`);
+    
+    // gets image element using the keycode
+    const drumImg = document.querySelector(`img[data-key="${keyCode}"]`);
 
-    // if audio element is found
-    if (audio) {
+
+    // if audio and drum image elements are found
+    if (audio && drumImg) {
         // it logs audio element
         console.log('Audio element found:', audio);
 
@@ -18,9 +23,22 @@ window.addEventListener('keydown', (event) => {
         audio.currentTime = 0;
         // then plays
         audio.play();
+        // visual effect on press
+        drumImg.classList.add('playing');
     } else {
         // logs if audio not found
         console.log('Audio element not found for key code:', keyCode);
     }
 });
 
+// event listener to detect when a key is released
+window.addEventListener('keyup', function (event) {
+    // gets the matching image with key code
+    const drumImg = document.querySelector(`img[data-key="${event.keyCode}"]`);
+
+    // checks if image is found
+    if (drumImg) {
+        // stops effect by removing playing class
+        drumImg.classList.remove('playing');
+    }
+});
