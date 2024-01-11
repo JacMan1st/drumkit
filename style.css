@@ -1,23 +1,58 @@
 #drumKit {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    height: 80vh;
-}
-
-img {
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
+    height: 100vh;
+    margin: 0 auto; 
+    max-width: 800px;
 }
 
 
+#hiHat {
+    position: absolute;
+    height: 300px; 
+    width: 130px;
+    margin-right: 200px; 
+    z-index: 2;
+}
+
+#snare {
+    position: absolute;
+    height: 200px;
+    width: 80px; 
+    margin-top: 30px; 
+    margin-right: 100px; 
+    z-index: 1;
+}
+
+#bass {
+    margin-top: 140px;
+    position: absolute;
+    height: 180px;
+    width: 200px; 
+    z-index: 3;
+}
+
+#tom {
+    position: absolute;
+    margin-left: 100px;
+    height: 100px;
+    width: 100px;
+}
+
+#crash {
+    position: absolute;
+    height: 300px; 
+    width: 100px;
+    margin-left: 200px;
+}
+
+
 
 img {
-    width: 100px;
-    height: 100px;
+    width: 150px; 
+    height: 150px; 
     cursor: pointer;
-    transition: transform 0.1s ease;
 }
 
 img.playing {
