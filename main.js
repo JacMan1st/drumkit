@@ -38,7 +38,7 @@ document.addEventListener('keyup', event => {
 
     // remove visual effects
     if (button) {
-        button.classList.remove('playing');
+        button.classList.remove('playing'); // issue with removing from button click
     }
     if (image) {
         image.classList.remove('playing');
