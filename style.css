@@ -1,10 +1,37 @@
+body {
+    margin: 0;
+    background-color: aqua;
+    background-image: url(crowdstage.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#keyButton {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%; 
+}
+
+#keyButton button {
+    background-color: rgba(0, 0, 0, 0.164);
+    border: groove;
+    color: white;
+    padding: 10px; 
+    margin: 20px;
+    margin-top: 195px; 
+    cursor: pointer; 
+}
+
+
 #drumKit {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0 auto; 
-    max-width: 800px;
+    overflow: auto;
 }
 
 
@@ -14,19 +41,20 @@
     width: 130px;
     margin-right: 200px; 
     z-index: 2;
+    margin-top: 300px;
 }
 
 #snare {
     position: absolute;
     height: 200px;
     width: 80px; 
-    margin-top: 30px; 
+    margin-top: 330px; 
     margin-right: 100px; 
     z-index: 1;
 }
 
 #bass {
-    margin-top: 140px;
+    margin-top: 440px;
     position: absolute;
     height: 180px;
     width: 200px; 
@@ -35,7 +63,8 @@
 
 #tom {
     position: absolute;
-    margin-left: 100px;
+    margin-left: 110px;
+    margin-top: 330px;
     height: 100px;
     width: 100px;
 }
@@ -44,17 +73,10 @@
     position: absolute;
     height: 300px; 
     width: 100px;
-    margin-left: 200px;
+    margin-left: 230px;
+    margin-top: 330px;
 }
 
-
-
-img {
-    width: 150px; 
-    height: 150px; 
-    cursor: pointer;
-}
-
-img.playing {
+.playing {
     transform: scale(1.1);
 }
